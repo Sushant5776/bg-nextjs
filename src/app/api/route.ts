@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData()
 
-    const response = await axios.post('http://localhost:8000', formData, {
+    const response = await axios.post(process.env.BACKEND_URL, formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
             'Accept': 'image/png'
